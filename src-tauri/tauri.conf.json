@@ -4,8 +4,8 @@
   "version": "0.1.0",
   "identifier": "com.tauri-e2e-practice.app",
   "build": {
-    "beforeDevCommand": "bun run dev",
-    "devUrl": "http://localhost:1420",
+    "beforeDevCommand": "bun run dev:ui",
+    "devUrl": "http://localhost:50070",
     "beforeBuildCommand": "bun run build",
     "frontendDist": "../dist"
   },
