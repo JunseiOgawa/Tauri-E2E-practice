@@ -19,4 +19,24 @@ window.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
     greet();
   });
+
+  // OpenFile ボタンをクリックしたら OpenFile() を呼び出す
+  (document.querySelector("#open-file") as HTMLButtonElement | null)?.addEventListener("click", () => {
+    OpenFile();
+  });
+
+  // Alate ボタンをクリックしたらアラートを表示
+  (document.querySelector("#alate") as HTMLButtonElement | null)?.addEventListener("click", () => {
+    alert("アラートボタンが押されました！");
+  });
 });
+
+
+function OpenFile() {
+  invoke("open_file").then((filePath) => {
+    console.log("Selected file:", filePath);
+  }).catch((error) => {
+    console.error("Error opening file:", error);
+  });
+}
+

@@ -3,11 +3,12 @@
   "productName": "tauri-e2e-practice",
   "version": "0.1.0",
   "identifier": "com.tauri-e2e-practice.app",
-  "build": {
+"build": {
     "beforeDevCommand": "bun run dev:ui",
     "devUrl": "http://localhost:50070",
     "beforeBuildCommand": "bun run build",
-    "frontendDist": "../dist"
+    "frontendDist": "../dist",
+    "devtools": true
   },
   "app": {
     "withGlobalTauri": true,
